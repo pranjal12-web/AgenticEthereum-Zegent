@@ -1,0 +1,94 @@
+query AaveQuery($address: String!) {
+    account(id: $address) {
+      id
+      depositCount
+      liquidateCount
+      openPositionCount
+      closedPositionCount
+      repayCount
+      borrowCount
+      liquidationCount
+
+      deposits {
+        id
+        amount
+        amountUSD
+        timestamp
+      }
+
+      borrows {
+        id
+        amount
+        amountUSD
+        asset {
+          name
+          symbol
+          decimals
+        }
+      }
+
+      liquidations {
+        id
+        amount
+        amountUSD
+        asset {
+          name
+          symbol
+          decimals
+        }
+      }
+
+      repays {
+        id
+        amount
+        amountUSD
+        asset {
+          name
+          symbol
+          decimals
+        }
+      }
+    }
+    tokens(first: 1) {
+      id
+      name
+      symbol
+      decimals
+    }
+    deposits(first:10) {
+        id
+        amount
+        amountUSD
+        timestamp
+      }
+    rewardTokens(first: 1) {
+      id
+      token {
+        id
+      }
+      type
+      _distributionEnd
+    }
+    borrows(first: 10) {
+      id
+      amount
+      amountUSD
+      asset {
+        name
+        symbol
+        decimals
+      }
+    }
+    repays(first: 10) {
+      id
+      amount
+      amountUSD
+    }
+    withdraws(first: 10) {
+      amountUSD
+      position {
+        liquidationCount
+      }
+    }
+  }
+

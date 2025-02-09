@@ -1,0 +1,20 @@
+# Core CDP requirements
+cdp-sdk==0.10.3
+cdp-agentkit-core==0.0.3
+cdp-langchain==0.0.4
+
+python-dotenv
+pickle
+flask
+flask-cors
+gql
+python-dotenv
+pickle-mixin
+langgraph
+groq
+langchain-groq
+langchain-core
+pydantic
+requests
+jsonschema
+

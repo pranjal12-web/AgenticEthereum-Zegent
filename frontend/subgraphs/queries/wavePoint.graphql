@@ -1,0 +1,30 @@
+query WaveQuery {
+  cstoneClaimeds(first: 10, where: {user: ""}) {
+    id
+    user
+    amount
+    blockNumber
+  }
+  etherDepositeds(first: 10) {
+    id
+    user
+    round
+    ethAmount
+  }
+  bracketDeposits(first: 10, where: {user: ""}) {
+    amount
+    token
+  }
+  alienXWithdraws(first: 10, where: {user: ""}) {
+    token
+    amount
+  }
+  ztDeposits(first: 10, where: {depositor: ""}) {
+    amount
+    token
+  }
+  ztWithdraws(first: 10, where: {withdrawer: ""}) {
+    token
+    amount
+  }
+}

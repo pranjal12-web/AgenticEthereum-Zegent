@@ -1,0 +1,14 @@
+{
+    "MAX_DEPOSIT":5000,
+    "MAX_REPAY":1000,
+    "MAX_LIQUIDATION":2000,
+    "PENALTY_PER_LIQUIDATION":5,
+    "totalDepositAmount":359,
+    "totalBorrowAmount":356,
+    "totalRepayAmount":0,
+    "totalLiquidationAmount":190,
+    "closedPositionCount":0,
+    "borrowCount":0,
+    "liquidateCount":0,
+    "threshold_credit_score":20
+}
