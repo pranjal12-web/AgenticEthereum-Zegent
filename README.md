@@ -23,13 +23,11 @@ When an AVS consumer queries CryptoSage, the request is sent to the `AgentServic
 ## Project Setup
 
 - Clone the repository using :-
-
 ```
 git clone https://github.com/pranjal12-web/AgenticEthereum-Zegent.git
                    or
 git clone git@github.com:pranjal12-web/AgenticEthereum-Zegent.git
 ```
-
 - To start the frontend run and check ```http://localhost:3000```:-
 ```
 cd frontend
@@ -37,32 +35,42 @@ npm install
 npm run dev
 ```
 
-- Set up the environment variables:
-   - Copy the example environment files and rename them:
-     ```sh
-     cp Agent-AVS/.env.example Agent-AVS/.env
-     cp Agent-AVS/AI-Agent/.env.example Agent-AVS/AI-Agent/.env
-     ```
-
+- Copy the example environment files and rename them:
+```sh
+cp Agent-AVS/.env.example Agent-AVS/.env
+cp Agent-AVS/AI-Agent/.env.example Agent-AVS/AI-Agent/.env
+```
 - Set the following environment variables in your `~/.bashrc` file:
-   ```sh
-   export CDP_API_KEY_NAME=""
-   export CDP_API_KEY_PRIVATE_KEY=""
-   export NETWORK_ID="base-sepolia"
-   export GROQ_API_KEY=""
-   ```
-
-   - After adding the variables, apply the changes by running:
-     ```sh
-     source ~/.bashrc
-
-
-
+ ```sh
+ export CDP_API_KEY_NAME=""
+ export CDP_API_KEY_PRIVATE_KEY=""
+ export NETWORK_ID="base-sepolia"
+ export GROQ_API_KEY=""
+ ```
+- After adding the variables, apply the changes by running:
+```sh
+source ~/.bashrc
+```
 - To start the flask server for AI agent run and check ```http://localhost:5000```:-
 ```
 cd Agent-AVS/AI-Agent
 pip install -r requirements.txt
 python chatbot-flask.py
+```
+-To check the AVS mechanism:
+
+-To run anvil on localhost:8545
+```
+anvil --chain-id 31337 --fork-url https://eth-mainnet.g.alchemy.com/v2/<ALCHEMY_API_KEY>
+```
+-To deploy contract:
+```
+forge script script/DeployAgentServiceManager.sol --rpc-url http://localhost:8545 --broadcast
+```
+-To test,run following commands simultaneously in different terminals:
+```
+bun run createTask.ts
+bun run respondToTask.ts
 ```
 
 ## Glimpses Of Zegent
