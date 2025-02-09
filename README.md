@@ -1,4 +1,4 @@
-#  Zegent: Under-Collateralized Lending & Verifiable AI for Crypto Analysis
+#  Zegent: Under-Collateralized Lending & Verifiable Crypto AI Agent
 
 ## 🚀 About
 
@@ -10,17 +10,17 @@ The public signals and zero-knowledge proof are then sent to the Loan Contract, 
 ---
 
 ### **CryptoSage – Verifiable AI for Trading & Analysis**
-CryptoSage, built using the CDP AgentKit, enhances token trading and analysis through AI-driven tools such as `AaveQueryTool`, `AaveSupplyTokenTool`, `MorphoQueryTool`, and `AerodromeTool`. To ensure verifiability, CryptoSage is secured through EigenLayer’s Autonomous Verifiable Service (AVS) mechanism.
+CryptoSage, built using the *CDP AgentKit*, enhances token trading and analysis through AI-driven tools such as `AaveQueryTool`, `AaveSupplyTokenTool`, `MorphoQueryTool`, and `AerodromeTool`. To ensure verifiability, CryptoSage is secured through *EigenLayer’s Autonomous Verifiable Service (AVS)* mechanism.
 
 When an AVS consumer queries CryptoSage, the request is sent to the `AgentServiceManager` contract, which emits a `NewTaskCreated` event. This notifies registered Operators, who have staked and delegated assets, to process the request. Each Operator independently hashes the response, signs it using their private key, and submits the signed hash back to the `AgentServiceManager` AVS contract. Only registered Operators who meet the required stake threshold can submit responses, ensuring a secure, verifiable, and decentralized AI-powered system for lending decisions and crypto analysis.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/ProjectFinalArchi.png)
 
-## Glimpses OF Zegent
+## Glimpses Of Zegent
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/cover.png)
 
