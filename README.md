@@ -22,20 +22,20 @@ When an AVS consumer queries CryptoSage, the request is sent to the `AgentServic
 
 ## Project Setup
 
-# 1. Clone the repository:-
+### 1. Clone the repository:-
 ```sh
 git clone https://github.com/pranjal12-web/AgenticEthereum-Zegent.git
                    or
 git clone git@github.com:pranjal12-web/AgenticEthereum-Zegent.git
 ```
-# 2. Start the frontend:
+### 2. Start the frontend:
 - Run the following commands and check ```http://localhost:3000```:
 ```sh
 cd frontend
 npm install
 npm run dev
 ```
-# 3. Environment variables Configuration
+### 3. Environment variables Configuration
 - Copy the example environment files and rename them:
 ```sh
 cp Agent-AVS/.env.example Agent-AVS/.env
@@ -52,14 +52,14 @@ cp Agent-AVS/AI-Agent/.env.example Agent-AVS/AI-Agent/.env
 ```sh
 source ~/.bashrc
 ```
-# 4. AI Agent setup
+### 4. AI Agent setup
 - To start the flask server, run and check ```http://localhost:5000```:-
 ```sh
 cd Agent-AVS/AI-Agent
 pip install -r requirements.txt
 python chatbot-flask.py
 ```
-# 5. AVS mechanism setup
+### 5. AVS mechanism setup
 
 - To run anvil on localhost:8545
 ```sh
