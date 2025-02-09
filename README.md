@@ -20,6 +20,51 @@ When an AVS consumer queries CryptoSage, the request is sent to the `AgentServic
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/ProjectFinalArchi.png)
 
+## Project Setup
+
+- Clone the repository using :-
+
+```
+git clone https://github.com/pranjal12-web/AgenticEthereum-Zegent.git
+                   or
+git clone git@github.com:pranjal12-web/AgenticEthereum-Zegent.git
+```
+
+- To start the frontend run and check ```http://localhost:3000```:-
+```
+cd frontend
+npm install
+npm run dev
+```
+
+- Set up the environment variables:
+   - Copy the example environment files and rename them:
+     ```sh
+     cp Agent-AVS/.env.example Agent-AVS/.env
+     cp Agent-AVS/AI-Agent/.env.example Agent-AVS/AI-Agent/.env
+     ```
+
+- Set the following environment variables in your `~/.bashrc` file:
+   ```sh
+   export CDP_API_KEY_NAME=""
+   export CDP_API_KEY_PRIVATE_KEY=""
+   export NETWORK_ID="base-sepolia"
+   export GROQ_API_KEY=""
+   ```
+
+   - After adding the variables, apply the changes by running:
+     ```sh
+     source ~/.bashrc
+
+
+
+- To start the flask server for AI agent run and check ```http://localhost:5000```:-
+```
+cd Agent-AVS/AI-Agent
+pip install -r requirements.txt
+python chatbot-flask.py
+```
+
 ## Glimpses Of Zegent
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/cover.png)
@@ -32,3 +77,5 @@ When an AVS consumer queries CryptoSage, the request is sent to the `AgentServic
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/Borrow-requests.png)
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/chatbot.png)
+
+
