@@ -57,17 +57,17 @@ cd Agent-AVS/AI-Agent
 pip install -r requirements.txt
 python chatbot-flask.py
 ```
--To check the AVS mechanism:
+- To check the AVS mechanism:
 
--To run anvil on localhost:8545
+- To run anvil on localhost:8545
 ```sh
 anvil --chain-id 31337 --fork-url https://eth-mainnet.g.alchemy.com/v2/<ALCHEMY_API_KEY>
 ```
--To deploy contract:
+- To deploy contract:
 ```sh
 forge script script/DeployAgentServiceManager.sol --rpc-url http://localhost:8545 --broadcast
 ```
--To test,run following commands simultaneously in different terminals:
+- To test,run following commands simultaneously in different terminals:
 ```sh
 bun run createTask.ts
 bun run respondToTask.ts
